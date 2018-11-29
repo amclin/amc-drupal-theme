@@ -1,0 +1,20 @@
+name = AMC
+description = A responsive theme based on the Skeleton Grid System and the HTML 5 Boilerplate
+package = AMC
+version = 1.0
+core = 7.x
+
+stylesheets[screen][] = css/normalize.css
+stylesheets[screen][] = css/main.css
+stylesheets[screen][] = css/base.css
+stylesheets[screen][] = css/skeleton.css
+stylesheets[screen][] = css/menu.css
+stylesheets[screen][] = css/portfolio.css
+stylesheets[print][] = css/print.css
+
+scripts[] = js/plugins.js
+scripts[] = js/main.js
+
+regions[content] = Content
+regions[menu_strip] = Menu Strip
+regions[background] = Background

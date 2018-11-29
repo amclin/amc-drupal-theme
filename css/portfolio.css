@@ -1,0 +1,50 @@
+@CHARSET "UTF-8";
+
+/**
+ * Portfolio display for anthonymclin.com
+ **/
+#slide_buttons {
+	position:				fixed;
+	bottom:					25px;
+	left:					437px;
+	z-index:				200;
+}
+
+#slide_buttons ul {
+	list-style-type:		none;
+	margin:					0;
+	padding:				0;
+}
+
+#slide_buttons li {
+	float:					left;
+	color:					#FFFFFF;
+	background:				#000000;
+	width:					15px;
+	height:					12px;
+	line-height:			9px;
+	margin:					0 3px 0 0;
+	text-align:				center;
+	font-size:				9px;
+	font-family:       Monaco, Lucida Console, Courier, mono;
+	padding:				3px 0 0 0;
+	overflow:				hidden;
+}
+
+#slide_buttons a {
+	text-decoration:		none;
+	color:					#FFFFFF;
+}
+
+#slide_buttons li:hover,
+#slide_buttons li:hover a,
+#slide_buttons li.active,
+#slide_buttons li.active a {
+	color:					#000000;
+	background:				#FFFFFF;
+	cursor:					pointer;
+}
+
+#slide_buttons li img {
+	visibility:				hidden;
+}
