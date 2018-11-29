@@ -1,2 +1,2 @@
 # amc-drupal-theme
-Drupal theme for AnthonyMcLin.com
+Drupal theme used for [AnthonyMcLin.com](https://anthonymclin.com)
