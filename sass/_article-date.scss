@@ -1,4 +1,6 @@
 // Controls the datestamp shown on articles and blog lists
+@import 'util/util'; // Foundation utilities
+
 @mixin article-date(
   $background: #333,
   $color: #999

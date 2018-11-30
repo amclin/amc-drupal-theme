@@ -7,7 +7,11 @@ sass.compiler = require('node-sass');
 
 gulp.task('sass', () => {
   return gulp.src('./sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      includePaths: [
+        'node_modules/foundation-sites/scss'
+      ]
+    }).on('error', sass.logError))
     .pipe(gulp.dest('./css'));
 });
 
