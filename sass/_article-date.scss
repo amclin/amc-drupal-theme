@@ -1,0 +1,24 @@
+// Controls the datestamp shown on articles and blog lists
+@mixin article-date(
+  $background: #333,
+  $color: #999
+) {
+  .submitted {
+    background: $background;
+    color: $color;
+    display: block;
+    font: {
+      family: Monaco, Lucida Console, Courier, mono;
+      size: 75%;
+    }
+    line-height: 10px;
+    margin: -35px 0 13px -106px;
+    padding: 4px 1px 3px 0;
+    position: absolute;
+    text: {
+      align: center;
+      transform: uppercase;
+    }
+    width: 80px;
+  }
+}
