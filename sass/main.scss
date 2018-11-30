@@ -1,3 +1,5 @@
+@import 'settings';
+
 /*
  * HTML5 Boilerplate
  *
@@ -131,20 +133,8 @@ h2.pagetitle {
     margin: 0.83em 0;
 }
 
-.submitted {
-	position:			absolute;
-	display:			block;
-	text-transform:		uppercase;
-	color:				#999999;
-	background:			#333333;
-	margin:				-35px 0 13px -106px;
-	line-height:		10px;
-	font-family:		Monaco, Lucida Console, Courier, mono;
-	width:				80px;
-	text-align:			center;
-	font-size:			75%;
-	padding:			4px 1px 3px 0;
-}
+@import 'article-date';
+@include article-date;
 
 .comment .author {
 	text-align:			right;
