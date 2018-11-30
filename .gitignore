@@ -1,2 +1,5 @@
-# Ignore system files
+# System files
 .DS_STORE
+
+# Node/NPM files
+node_modules
