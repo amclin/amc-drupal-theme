@@ -86,12 +86,12 @@ $htmlattributes = "lang=\"{$language->language}\" dir=\"{$language->dir}\" $rdf_
         </script>
         
         <!-- AddThis Button BEGIN -->
-		<div class="addthis_toolbox addthis_floating_style addthis_16x16_style" style="left:50px;top:50px;">
-		<a class="addthis_button_preferred_1"></a>
-		<a class="addthis_button_preferred_2"></a>
-		<a class="addthis_button_preferred_3"></a>
-		<a class="addthis_button_preferred_4"></a>
-		<a class="addthis_button_compact"></a>
+		<div class="addthis_toolbox addthis_floating_style addthis_16x16_style">
+			<a class="addthis_button_preferred_1"></a>
+			<a class="addthis_button_preferred_2"></a>
+			<a class="addthis_button_preferred_3"></a>
+			<a class="addthis_button_preferred_4"></a>
+			<a class="addthis_button_compact"></a>
 		</div>
 		<script type="text/javascript">var addthis_config = {"data_track_addressbar":true,data_ga_property: 'UA-1527676-1',data_ga_social : true};</script>
 		<script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e1bd9e270c39903"></script>
