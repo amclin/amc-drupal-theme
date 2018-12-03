@@ -9,6 +9,7 @@ gulp.task('sass', () => {
   return gulp.src('./sass/**/*.scss')
     .pipe(sass({
       includePaths: [
+        'node_modules/normalize.css',
         'node_modules/foundation-sites/scss'
       ]
     }).on('error', sass.logError))
