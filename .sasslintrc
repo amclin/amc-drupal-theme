@@ -1,5 +1,6 @@
 files:
   include: 'sass/**/*.s+(a|c)ss'
 rules:
+  no-css-comments: 1
   quotes:
     style: single
