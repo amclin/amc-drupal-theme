@@ -134,7 +134,10 @@ h2.pagetitle {
 }
 
 @import 'article-date';
+@import 'addthis';
+
 @include article-date;
+@include addthis;
 
 .comment .author {
 	text-align:			right;

@@ -1,0 +1,33 @@
+// Styles the social-sharing widget
+@import 'util/util'; // Foundation utilities
+
+@mixin addthis-position {
+  left: 4px;
+  top: 56px;
+
+  @include breakpoint(medium) {
+    left: 50px;
+  }
+
+  a:first-child {
+    margin-top: 4px;
+  }
+}
+
+@mixin addthis-container {
+  border-radius: 0;
+  box-shadow: 0 0 10px 0 #333;
+}
+
+@mixin addthis {
+  .addthis {
+    &_floating_style {
+      @include addthis-position;
+
+      // Don't like nesting but need the specificity
+      &.addthis_16x16_style {
+        @include addthis-container;
+      }
+    }
+  }
+}
