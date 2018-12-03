@@ -5,7 +5,6 @@ version = 1.0
 core = 7.x
 
 stylesheets[screen or print][] = css/fonts.css
-stylesheets[screen][] = css/normalize.css
 stylesheets[screen][] = css/main.css
 stylesheets[screen][] = css/base.css
 stylesheets[screen][] = css/skeleton.css

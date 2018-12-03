@@ -1,0 +1,3 @@
+sass-lint:
+  config_file: .sasslintrc
+  enabled: true
