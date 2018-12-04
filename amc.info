@@ -18,3 +18,5 @@ scripts[] = js/main.js
 regions[content] = Content
 regions[menu_strip] = Menu Strip
 regions[background] = Background
+
+settings[amc_author] =
