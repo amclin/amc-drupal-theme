@@ -1,3 +1,10 @@
+@import 'settings';
+@import 'typography';
+@import 'article-date';
+@import 'addthis';
+
+@import 'normalize';
+
 /*
  * HTML5 Boilerplate
  *
@@ -98,6 +105,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+@include typography;
 
 h1,h2,h3,h4,h5,h6 {
 	font-family: 'Open Sans',CG,Century Gothic,Lucida Grande,Lucida Sans Unicode, Helvetica, Arial, sans-serif;
@@ -131,20 +139,8 @@ h2.pagetitle {
     margin: 0.83em 0;
 }
 
-.submitted {
-	position:			absolute;
-	display:			block;
-	text-transform:		uppercase;
-	color:				#999999;
-	background:			#333333;
-	margin:				-35px 0 13px -106px;
-	line-height:		10px;
-	font-family:		Monaco, Lucida Console, Courier, mono;
-	width:				80px;
-	text-align:			center;
-	font-size:			75%;
-	padding:			4px 1px 3px 0;
-}
+@include article-date;
+@include addthis;
 
 .comment .author {
 	text-align:			right;
@@ -214,16 +210,6 @@ h2.pagetitle {
 }
 
 
-/** Transition effect on links **/
-a {
-	transition-duration: 			.25s;
-	-moz-transition-duration: 		.25s;
-	-webkit-transition-duration: 	.25s;
-	-o-transition-duration:			.25s;	
-}
-
-
-
 /** photo gallery **/
 .view-id-photo_gallery {
 	display: none;
@@ -245,7 +231,7 @@ a {
     border: 0;
     overflow: hidden;
     /* IE 6/7 fallback */
-    *text-indent: -9999px;
+    /* *text-indent: -9999px;*/
 }
 
 .ir:before {
@@ -330,7 +316,7 @@ a {
  */
 
 .clearfix {
-    *zoom: 1;
+   /* *zoom: 1; */
 }
 
 /* ==========================================================================

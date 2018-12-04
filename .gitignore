@@ -1,2 +1,9 @@
-# Ignore system files
+# System files
 .DS_STORE
+
+# Node/NPM files
+node_modules
+
+# Compiled files, only original source files should be in source control
+main.css
+fonts.css
