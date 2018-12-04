@@ -1,4 +1,7 @@
 @import 'settings';
+@import 'typography';
+@import 'article-date';
+@import 'addthis';
 
 @import 'normalize';
 
@@ -102,6 +105,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+@include typography;
 
 h1,h2,h3,h4,h5,h6 {
 	font-family: 'Open Sans',CG,Century Gothic,Lucida Grande,Lucida Sans Unicode, Helvetica, Arial, sans-serif;
@@ -134,9 +138,6 @@ h2.pagetitle {
     font-size: 1.5em;
     margin: 0.83em 0;
 }
-
-@import 'article-date';
-@import 'addthis';
 
 @include article-date;
 @include addthis;
@@ -207,16 +208,6 @@ h2.pagetitle {
 .region-content .view-content .views-row-6 {
 	opacity:		.5;
 }
-
-
-/** Transition effect on links **/
-a {
-	transition-duration: 			.25s;
-	-moz-transition-duration: 		.25s;
-	-webkit-transition-duration: 	.25s;
-	-o-transition-duration:			.25s;	
-}
-
 
 
 /** photo gallery **/
