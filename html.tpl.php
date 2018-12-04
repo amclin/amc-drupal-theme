@@ -58,7 +58,12 @@ $htmlattributes = "lang=\"{$language->language}\" dir=\"{$language->dir}\" $rdf_
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><?php print $head_title; ?></title>
 		<meta name="viewport" content="width=device-width">
-		<link rel="author" href="https://plus.google.com/110145750668302729600/posts"/>
+		<?php
+		  $amc_author = theme_get_setting('amc_author');
+		  if($amc_author) {
+			print "<link rel=\"author\" href=\"$amc_author\"/>\n\r";
+		  }
+		?>
 		<?php print $styles; ?>
 		<?php print $head_scripts; //Most scripts moved to bottom of page ?>
 	</head>
