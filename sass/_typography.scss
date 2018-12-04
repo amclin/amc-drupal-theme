@@ -1,0 +1,15 @@
+@import 'settings';
+
+@mixin typography {
+  a {
+    color: $medium-gray;
+    text-decoration: none;
+    transition-duration: .25s;
+
+    &:hover,
+    &:active {
+        color: $black;
+        text-decoration: underline;
+    }
+  }
+}
