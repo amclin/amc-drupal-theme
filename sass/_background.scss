@@ -1,0 +1,29 @@
+// Manages the size of the full-screen background
+
+/// Sets a background to the size of the window
+/// @param {url} url to image
+/// @param {Color} color to fill the background
+@mixin full-screen-background-image(
+  $url: null,
+  $color: $black
+) {
+  background: {
+    color: $color;
+    position: center center;
+    size: cover;
+  }
+  @if $url {
+    background-image: url(#{$url});
+  }
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: -1;
+}
+
+@mixin background {
+  .region-background {
+    @include full-screen-background-image;
+  }
+}
