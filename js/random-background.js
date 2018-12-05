@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
      */
     var setBackground = function(url) {
         $('.region-background').css({
-            'background-image': `url(${url})`,
+            "background-image": `url(${url})`,
         });
     }
 

@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
          */
         var setBackground = function(url) {
             $('.region-background').css({
-                "background-image": "`url(${url})`",
+                "background-image": `url(${url})`
             });
         }
 
@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
         var slideCounters = $('#slide_buttons li');
         slideCounters.on('click', 'a', (ev) => {
             ev.preventDefault(); // Block clicking on anchors
-            var $a = $(ev.target)
+            var $a = $(ev.target);
             var $li = $a.parent();
     		slideCounters.removeClass('active');
             $li.addClass('active');
