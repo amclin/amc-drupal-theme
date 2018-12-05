@@ -2,6 +2,7 @@
 @import 'typography';
 @import 'article-date';
 @import 'addthis';
+@import 'background';
 
 @import 'normalize';
 
@@ -139,6 +140,7 @@ h2.pagetitle {
     margin: 0.83em 0;
 }
 
+@include background;
 @include article-date;
 @include addthis;
 
