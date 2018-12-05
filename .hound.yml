@@ -1,3 +1,6 @@
 sass-lint:
   config_file: .sasslintrc
   enabled: true
+
+jshint:
+  esversion: 6

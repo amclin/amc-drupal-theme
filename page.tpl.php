@@ -114,10 +114,9 @@
 	<?php print render($page['background']); ?>
 <?php } else { ?>
 	<div class="region region-background">
-	    <div id="block-views-random-photo-block" class="block block-views">
-			<div>
-				<img src="/sites/all/themes/amc/images/blank.png" width="1200" height="900" />
-			</div>
+		<div id="block-views-random-photo-block"
+			class="block block-views"
+			data-api="<?php print theme_get_setting('amc_api_random_photo'); ?>">
 		</div>
 	</div>
 <?php } ?>

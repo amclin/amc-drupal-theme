@@ -14,9 +14,12 @@ stylesheets[print][] = css/print.css
 
 scripts[] = js/plugins.js
 scripts[] = js/main.js
+scripts[] = js/random-background.js
+scripts[] = js/portfolio.js
 
 regions[content] = Content
 regions[menu_strip] = Menu Strip
 regions[background] = Background
 
 settings[amc_author] =
+settings[amc_random_background_api] =
