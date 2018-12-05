@@ -1,7 +1,7 @@
 name = AMC
 description = A responsive theme based on the Skeleton Grid System and the HTML 5 Boilerplate
 package = AMC
-version = 1.1.0
+version = 1.2.1
 core = 7.x
 
 stylesheets[screen or print][] = css/fonts.css
