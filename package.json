@@ -23,6 +23,7 @@
     "foundation-sites": "^6.5.1",
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.2",
+    "main.css": "^1.0.0",
     "node-sass": "^4.10.0",
     "normalize.css": "^8.0.1",
     "sass-lint": "^1.12.1"
