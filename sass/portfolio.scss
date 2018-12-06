@@ -1,5 +1,7 @@
 @CHARSET 'UTF-8';
 
+@import 'settings';
+
 //
 // Portfolio display for anthonymclin.com
 //
@@ -16,8 +18,8 @@
   }
 
   li {
-    background: #000000;
-    color: #FFFFFF;
+    background: $black;
+    color: $white;
     float: left;
     font-family: Monaco, Lucida Console, Courier, mono;
     font-size: 9px;
@@ -30,7 +32,7 @@
   }
 
   a {
-    color: #FFFFFF;
+    color: $white;
     display: inline-block;
     height: 100%;
     padding: 3px 0 0 0;
@@ -43,8 +45,8 @@
     &:hover a,
     &.active,
     &.active a {
-      color: #000000;
-      background: #FFFFFF;
+      background: $white;
+      color: $black;
       cursor: pointer;
     }
 
