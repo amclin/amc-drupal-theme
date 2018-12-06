@@ -6,6 +6,7 @@ node_modules
 
 # Compiled files, only original source files should be in source control
 css/fonts.css
+css/layout.css
 css/main.css
 css/menu.css
 css/portfolio.css
