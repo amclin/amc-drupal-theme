@@ -9,8 +9,10 @@
     left: 50px;
   }
 
-  a:first-child {
-    margin-top: 4px;
+  a {
+    &:first-child {
+      margin-top: 4px;
+    }
   }
 }
 
@@ -21,11 +23,12 @@
 
 @mixin addthis {
   .addthis {
-    &_floating_style {
+    &_floating_style { // sass-lint:disable-line class-name-format
       @include addthis-position;
 
-      // Don't like nesting but need the specificity
-      &.addthis_16x16_style {
+      // Don't like nesting but need the specificity because
+      // AddThis styles are injected later in the DOM than the site styles
+      &.addthis_16x16_style { // sass-lint:disable-line class-name-format
         @include addthis-container;
       }
     }
