@@ -98,7 +98,7 @@ textarea {
 .chromeframe {
     margin: 0.2em 0;
     background: #ccc;
-    color: #000;
+    color: $black;
     padding: 0.2em 0;
 }
 
@@ -118,10 +118,10 @@ h1,h2 {
 }
 
 h1 a,h2 a {
-	color: #333;
+	color: $dark-gray;
 }
 h1 a:hover, h2 a:hover {
-	color: #999;
+	color: $medium-gray;
 }
 
 
@@ -133,7 +133,7 @@ h2.pagetitle {
 	text-transform: lowercase;
 	margin: 		0 0 0 0;
 	font-weight: 	300;
-	color: 			#FFFFFF;
+	color: 			 $white;
 }
 .node-article .content>h1 { 	/* Make article h1 look like h2 */
     font-size: 1.5em;
@@ -157,13 +157,13 @@ h2.pagetitle {
 	position:			fixed;
 	top:				0;
 	left:				0;
-	background:			url(../images/ajax-loader.gif) center center no-repeat #000;
+	background:			url(../images/ajax-loader.gif) center center no-repeat $black;
 }
 
 
 /******* Primary page vertical content ******/
 .region-content {
-	color:		#333;
+	color:		$dark-gray;
 	font-size:	75%;
 	margin-bottom: 250px;
 }
@@ -175,10 +175,10 @@ h2.pagetitle {
 .region-content .comment-form, /* article comments form */
 .region-content .comment-wrapper h2,
 .region-content .item-list {
-	background:		#FFF;
+	background:		 $white;
 	padding:		20px;
 	margin:			0 0 10px 0;
-	box-shadow:		0 0 10px 0 #333;
+	box-shadow:		0 0 10px 0 $dark-gray;
 }
 .region-content .comment-wrapper h2 {
 	background:		rgb(230, 240, 255);
