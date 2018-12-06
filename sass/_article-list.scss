@@ -1,0 +1,36 @@
+//
+// List of articles
+//
+
+// Graduated transparency
+// First is fully opaque, last is mostly transparent
+@mixin graduated-transparency-blocks (
+  $max: 1,    // Maximum opacity
+  $min: .25,  // Minimum opacity
+  $steps: 5   // Total number of steps to reach max
+) {
+  opacity: $min;
+  transition-duration: .25s;
+
+  // Iterate through the subsequent items
+  @for $i from 2 to ($steps + 1) {
+    &:nth-of-type(#{$i}) {
+      opacity: $max - ($i * ($min/$steps));
+    }
+  }
+
+  &:nth-of-type(1), // First item is maximum opacity
+  &:hover {         // Hovering an element makes it visible
+    opacity: $max;
+  }
+}
+
+@mixin article-list {
+  .region-content {
+    .view-content {
+      .views-row {
+        @include graduated-transparency-blocks;
+      }
+    }
+  }
+}

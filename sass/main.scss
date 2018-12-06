@@ -1,6 +1,8 @@
 @import 'settings';
+
 @import 'typography';
 @import 'article-date';
+@import 'article-list';
 @import 'addthis';
 @import 'background';
 
@@ -164,8 +166,8 @@ h2.pagetitle {
 /******* Primary page vertical content ******/
 .region-content {
 	color:		#333;
-	font-size:	75%;
-	margin-bottom: 250px;
+  font-size: 75%;
+  margin-bottom: 250px;
 }
 
 /** white content boxes **/
@@ -175,50 +177,27 @@ h2.pagetitle {
 .region-content .comment-form, /* article comments form */
 .region-content .comment-wrapper h2,
 .region-content .item-list {
-	background:		#FFF;
-	padding:		20px;
-	margin:			0 0 10px 0;
+  background: $white;
+  margin: 0 0 10px;
+  padding: 20px;
 	box-shadow:		0 0 10px 0 #333;
 }
-.region-content .comment-wrapper h2 {
-	background:		rgb(230, 240, 255);
-	opacity: 		1
+
+.region-content {
+  .comment-wrapper {
+    h2 {
+      background: rgb(230, 240, 255);
+      opacity: 1;
+    }
+  }
 }
 
-
-/** Graduated opacity effect **/
-.region-content .view-content .views-row {
-	opacity:						.25;
-	transition-duration: 			.5s;
-	-moz-transition-duration: 		.5s;
-	-webkit-transition-duration: 	.5s;
-	-o-transition-duration:			.5s;
-}
-
-.region-content .view-content .views-row:hover,
-.region-content .view-content .views-row-1 {
-	opacity:		1;
-}
-
-.region-content .view-content .views-row-2,
-.region-content .view-content .views-row-3,
-.region-content .view-content .views-row-4 {
-	opacity:		.75;
-}
-
-.region-content .view-content .views-row-5,
-.region-content .view-content .views-row-6 {
-	opacity:		.5;
-}
-
+@include article-list;
 
 /** photo gallery **/
 .view-id-photo_gallery {
 	display: none;
 }
-
-
-
 
 /* ==========================================================================
    Helper classes
