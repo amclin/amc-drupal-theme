@@ -1,0 +1,47 @@
+// Controls the appearance of the list of menu items
+@mixin menu-list {
+  float: left;
+  height: 60px;
+  list-style-type: none;
+  margin: 4px 15px 0 0;
+  padding: 0;
+}
+
+// Controls the appearance of an individual item in the menu
+@mixin menu-list-item {
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 14px;
+  padding: 0 0 0 10px;
+  text-transform: uppercase;
+}
+
+// Controls the ppearance of the links in the menu
+@mixin menu-list-link {
+  color: $dark-gray;
+  text-decoration: none;
+
+  &.active,
+  &:hover {
+    color: $medium-gray;
+  }
+}
+
+// Outputs styles the main menu elements
+@mixin menu-contents {
+  #menu {
+    a {
+      @include menu-list-link;
+    }
+
+    ul {
+      &.menu {
+        @include menu-list;
+
+        li {
+          @include menu-list-item;
+        }
+      }
+    }
+  }
+}
