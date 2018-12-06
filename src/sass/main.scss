@@ -1,0 +1,121 @@
+@import 'settings';
+@import 'typography';
+@import 'article-date';
+@import 'addthis';
+@import 'background';
+
+@import 'normalize';
+
+@import 'base'; // HTML5 Boilerplate
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+strong {
+  font-weight: 600;
+}
+
+// * ==========================================================================
+//   Author's custom styles
+//   ========================================================================== */
+
+@include typography;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', CG, Century Gothic, Lucida Grande, Lucida Sans Unicode, Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+
+  a {
+    color: $dark-gray;
+
+    &:hover {
+      color: $medium-gray;
+    }
+  }
+
+  // Page Title
+  &.pagetitle {
+    color: $white;
+    font-size: 250%;
+    font-weight: 300;
+    margin: 0;
+    text-align: right;
+    text-transform: lowercase;
+  }
+}
+
+.node-article {
+  .content>h1 { 	//* Make article h1 look like h2 */
+    font-size: 1.5em;
+    margin: .83em 0;
+  }
+}
+
+@include background;
+@include article-date;
+@include addthis;
+
+.comment {
+  .author {
+    text-align:	right;
+  }
+}
+
+//******* Background Image *******/
+#block-views-random-photo-block {
+  background: url('../images/ajax-loader.gif') center center no-repeat $black;
+  left: 0;
+  overflow: hidden;
+  position:	fixed;
+  top: 0;
+  z-index: -100;
+}
+
+//******* Primary page vertical content ******/
+.region-content {
+  color: $dark-gray;
+  font-size: 75%;
+  margin-bottom: 250px;
+}
+
+//** white content boxes **/
+.region-content .node-teaser, //* article lists */
+.node-type-article .region-content .node-article>.content, //* full article display */
+.region-content .comment, //* article comments */
+.region-content .comment-form, //* article comments form */
+.region-content .comment-wrapper h2,
+.region-content .item-list {
+  background: $white;
+  box-shadow: $shadow;
+  margin: 0 0 10px;
+  padding: 20px;
+}
+
+.region-content {
+  .comment-wrapper {
+    h2 {
+      background: rgb(230, 240, 255);
+      opacity: 1;
+    }
+  }
+}
+
+@include article-list;
+
+@import 'helpers'; // HTML5 Boilerplate
+// @import 'mqs';  // HTML5 Boilerplate
