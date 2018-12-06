@@ -18,6 +18,9 @@ $black: #000 !default;
 /// @type Color
 $white: #fff !default;
 
+/// Standard drop shady
+/// @type List
+$shadow: 0 0 10px 0 $dark-gray;
 
 // 2. Breakpoints
 // --------------

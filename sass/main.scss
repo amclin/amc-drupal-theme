@@ -178,7 +178,7 @@ h2.pagetitle {
 	background:		 $white;
 	padding:		20px;
 	margin:			0 0 10px 0;
-	box-shadow:		0 0 10px 0 $dark-gray;
+	box-shadow:		$shadow;
 }
 .region-content .comment-wrapper h2 {
 	background:		rgb(230, 240, 255);

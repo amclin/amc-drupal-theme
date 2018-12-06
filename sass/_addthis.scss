@@ -16,7 +16,7 @@
 
 @mixin addthis-container {
   border-radius: 0;
-  box-shadow: 0 0 10px 0 #333;
+  box-shadow: $shadow;
 }
 
 @mixin addthis {
