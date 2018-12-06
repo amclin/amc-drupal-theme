@@ -29,7 +29,7 @@
 
 // Outputs styles the main menu elements
 @mixin menu-contents {
-  #menu {
+  .amc-menu {
     a {
       @include menu-list-link;
     }

@@ -17,7 +17,7 @@
 
 // Positions and sizes the content area of the menu bar
 @mixin menu-content-block {
-  background: #C4D8E3;
+  background: $light-blue;
   border-left: 5px solid $dark-gray;
   border-right: 5px solid $dark-gray;
   display: block;
@@ -39,15 +39,17 @@
 
 // Outputs the classes for styling the menu bar
 @mixin menu-strip {
-  #strip {
-    @include menu-strip-block;
-  }
+  .amc {
+    &-strip {
+      @include menu-strip-block;
+    }
 
-  #menu {
-    @include menu-content-block;
-  }
+    &-menu {
+      @include menu-content-block;
+    }
 
-  #filler {
-    @include menu-filler-block;
+    &-filler {
+      @include menu-filler-block;
+    }
   }
 }

@@ -74,12 +74,12 @@
 ?>
 
 <?php if (isset($page['menu_strip'])): ?>
-	<nav id="strip" role="navigation">
-		<div id="logo"><a href="https://anthonymclin.com">anthonymclin.com</a></div>
-		<div id="menu">
+	<nav class="amc-strip">
+		<div class="amc-logo"><a href="https://anthonymclin.com">anthonymclin.com</a></div>
+		<div class="amc-menu">
 			<?php print render($page['menu_strip']); ?>
 		</div>
-		<div id="filler">&nbsp;</div>
+		<div class="amc-filler">&nbsp;</div>
 	</nav>
 <?php endif; ?>
 
