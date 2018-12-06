@@ -1,9 +1,0 @@
-//
-// Layout of amc templates
-//
-@import 'settings';
-@import 'util/util'; // Foundation utilities
-
-@import 'layout/css-grid';
-
-@include amc-layout-grid;

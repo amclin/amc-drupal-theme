@@ -83,13 +83,8 @@
 	</nav>
 <?php endif; ?>
 
-<div class="amc-container">
-	<?php if($messages) { ?>
-		<header class="amc-messages">
-			<?php print $messages; ?>
-		</header>
-	<?php } ?>
-	<header class="amc-title">
+<div class="container">
+	<div class="nine columns offset-by-seven page-contents">
 		<?php
 			//List views without titles (like homepage)
 			if(empty($title)) {
@@ -110,10 +105,9 @@
 			$titletag = "<$titletag class='pagetitle'>%s</$titletag>";
 		?>
 		<?php print sprintf($titletag,$title); ?>
-	</header>
-	<main class="amc-content">
+		<?php print $messages; ?>
 		<?php print render($page['content']); ?>
-	</main>
+	</div>
 </div>
 
 <?php if (isset($page['background']) && !empty($page['background'])) { ?>

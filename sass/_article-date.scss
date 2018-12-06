@@ -1,10 +1,9 @@
 // Controls the datestamp shown on articles and blog lists
-@import 'settings';
 @import 'util/util'; // Foundation utilities
 
 @mixin article-date-styles(
-  $background: $dark-gray,
-  $color: $medium-gray
+  $background: #333,
+  $color: #999
 ) {
   background: $background;
   color: $color;
