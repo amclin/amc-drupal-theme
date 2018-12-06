@@ -22,7 +22,7 @@
     text-decoration: none;
   }
 
-  .amc-strip:hover & {
+  .amc-strip:hover & { // sass-lint:disable-line force-pseudo-nesting // Needed to support trailing &
     color: $medium-gray;
   }
 }
