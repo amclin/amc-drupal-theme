@@ -1,9 +1,9 @@
 'use strict'
 
 const gulp = require('gulp')
-var sass = require('gulp-sass')
-var sourcemaps = require('gulp-sourcemaps');
-var babel = require('gulp-babel');
+const sourcemaps = require('gulp-sourcemaps')
+const babel = require('gulp-babel')
+let sass = require('gulp-sass')
 
 const destination = './dist/amc'
 const sassPaths = [
@@ -31,7 +31,7 @@ gulp.task('js', () => {
   return gulp.src('./src/**/*.js')
     .pipe(sourcemaps.init())
     .pipe(babel())
-    .pipe(sourcemaps.write("."))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(destination))
 })
 
