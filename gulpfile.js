@@ -2,6 +2,9 @@
 
 const gulp = require('gulp')
 var sass = require('gulp-sass')
+var sourcemaps = require('gulp-sourcemaps');
+var babel = require('gulp-babel');
+
 const destination = './dist/amc'
 const sassPaths = [
   'node_modules/main.css/dist',
@@ -26,6 +29,9 @@ gulp.task('sass:watch', () => {
 // Copies theme .js files to distribution
 gulp.task('js', () => {
   return gulp.src('./src/**/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(babel())
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(destination))
 })
 
