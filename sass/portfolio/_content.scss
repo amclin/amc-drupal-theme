@@ -1,0 +1,6 @@
+// Styles the inline gallery of images placed as mainline content
+@mixin portfolio-inline-content {
+  .view-id-photo_gallery { // sass-lint:disable-line class-name-format
+    display: none;
+  }
+}
