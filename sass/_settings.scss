@@ -8,7 +8,7 @@ $medium-gray: #999 !default;
 
 /// Color used for dark gray UI items.
 /// @type Color
-$dark-gray: #8a8a8a !default;
+$dark-gray: #333 !default;
 
 /// Color used for black ui items.
 /// @type Color
@@ -18,6 +18,9 @@ $black: #000 !default;
 /// @type Color
 $white: #fff !default;
 
+/// Standard drop shady
+/// @type List
+$shadow: 0 0 10px 0 $dark-gray;
 
 // 2. Breakpoints
 // --------------

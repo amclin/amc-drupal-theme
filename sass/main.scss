@@ -6,332 +6,133 @@
 
 @import 'normalize';
 
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+@import 'base'; // HTML5 Boilerplate
 
 html,
 button,
 input,
 select,
 textarea {
-    color: #222;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-body {
-    font-size: 1em;
-    line-height: 1.4;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 strong {
-	font-weight: 600;
+  font-weight: 600;
 }
 
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection declarations have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
- * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
- */
-
-img {
-    vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-/* ==========================================================================
-   Chrome Frame prompt
-   ========================================================================== */
-
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+// * ==========================================================================
+//   Author's custom styles
+//   ========================================================================== */
 
 @include typography;
 
-h1,h2,h3,h4,h5,h6 {
-	font-family: 'Open Sans',CG,Century Gothic,Lucida Grande,Lucida Sans Unicode, Helvetica, Arial, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', CG, Century Gothic, Lucida Grande, Lucida Sans Unicode, Helvetica, Arial, sans-serif;
 }
 
-h1,h2 {
-	text-transform:		uppercase;
-	font-weight:		300;
+h1,
+h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+
+  a {
+    color: $dark-gray;
+
+    &:hover {
+      color: $medium-gray;
+    }
+  }
+
+  // Page Title
+  &.pagetitle {
+    color: $white;
+    font-size: 250%;
+    font-weight: 300;
+    margin: 0;
+    text-align: right;
+    text-transform: lowercase;
+  }
 }
 
-h1 a,h2 a {
-	color: #333;
-}
-h1 a:hover, h2 a:hover {
-	color: #999;
-}
-
-
-/******* Page Title *******/
-h1.pagetitle,
-h2.pagetitle {
-	font-size: 		250%;
-	text-align: 	right;
-	text-transform: lowercase;
-	margin: 		0 0 0 0;
-	font-weight: 	300;
-	color: 			#FFFFFF;
-}
-.node-article .content>h1 { 	/* Make article h1 look like h2 */
+.node-article {
+  .content>h1 { 	//* Make article h1 look like h2 */
     font-size: 1.5em;
-    margin: 0.83em 0;
+    margin: .83em 0;
+  }
 }
 
 @include background;
 @include article-date;
 @include addthis;
 
-.comment .author {
-	text-align:			right;
+.comment {
+  .author {
+    text-align:	right;
+  }
 }
 
-
-
-/******* Background Image *******/
+//******* Background Image *******/
 #block-views-random-photo-block {
-	overflow:			hidden;
-	z-index:			-100;
-	position:			fixed;
-	top:				0;
-	left:				0;
-	background:			url(../images/ajax-loader.gif) center center no-repeat #000;
+  background: url('../images/ajax-loader.gif') center center no-repeat $black;
+  left: 0;
+  overflow: hidden;
+  position:	fixed;
+  top: 0;
+  z-index: -100;
 }
 
-
-/******* Primary page vertical content ******/
+//******* Primary page vertical content ******/
 .region-content {
-	color:		#333;
-	font-size:	75%;
-	margin-bottom: 250px;
+  color: $dark-gray;
+  font-size: 75%;
+  margin-bottom: 250px;
 }
 
-/** white content boxes **/
-.region-content .node-teaser, /* article lists */
-.node-type-article .region-content .node-article>.content, /* full article display */
-.region-content .comment, /* article comments */
-.region-content .comment-form, /* article comments form */
+//** white content boxes **/
+.region-content .node-teaser, //* article lists */
+.node-type-article .region-content .node-article>.content, //* full article display */
+.region-content .comment, //* article comments */
+.region-content .comment-form, //* article comments form */
 .region-content .comment-wrapper h2,
 .region-content .item-list {
-	background:		#FFF;
-	padding:		20px;
-	margin:			0 0 10px 0;
-	box-shadow:		0 0 10px 0 #333;
+  background: $white;
+  box-shadow: $shadow;
+  margin: 0 0 10px;
+  padding: 20px;
 }
+
 .region-content .comment-wrapper h2 {
-	background:		rgb(230, 240, 255);
-	opacity: 		1
+  background: rgb(230, 240, 255);
+  opacity: 1;
 }
 
 
-/** Graduated opacity effect **/
+//* Graduated opacity effect **/
 .region-content .view-content .views-row {
-	opacity:						.25;
-	transition-duration: 			.5s;
-	-moz-transition-duration: 		.5s;
-	-webkit-transition-duration: 	.5s;
-	-o-transition-duration:			.5s;
+  opacity: .25;
+  transition-duration: .5s;
 }
 
 .region-content .view-content .views-row:hover,
 .region-content .view-content .views-row-1 {
-	opacity:		1;
+  opacity: 1;
 }
 
 .region-content .view-content .views-row-2,
 .region-content .view-content .views-row-3,
 .region-content .view-content .views-row-4 {
-	opacity:		.75;
+  opacity: .75;
 }
 
 .region-content .view-content .views-row-5,
 .region-content .view-content .views-row-6 {
-	opacity:		.5;
+  opacity: .5;
 }
 
-
-/** photo gallery **/
-.view-id-photo_gallery {
-	display: none;
-}
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Image replacement
- */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    /* IE 6/7 fallback */
-    /* *text-indent: -9999px;*/
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%;
-}
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.clearfix {
-   /* *zoom: 1; */
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
-    /* Style adjustments for high resolution devices */
-}
+@import 'helpers'; // HTML5 Boilerplate
+// @import 'mqs';  // HTML5 Boilerplate
