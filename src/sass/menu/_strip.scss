@@ -39,15 +39,17 @@
 
 // Outputs the classes for styling the menu bar
 @mixin menu-strip {
-  #strip {
-    @include menu-strip-block;
-  }
+  .amc {
+    &-strip {
+      @include menu-strip-block;
+    }
 
-  #menu {
-    @include menu-content-block;
-  }
+    &-menu {
+      @include menu-content-block;
+    }
 
-  #filler {
-    @include menu-filler-block;
+    &-filler {
+      @include menu-filler-block;
+    }
   }
 }

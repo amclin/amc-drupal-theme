@@ -22,14 +22,14 @@
     text-decoration: none;
   }
 
-  #strip:hover & {
+  .amc-strip:hover & {
     color: $medium-gray;
   }
 }
 
 // Outputs the classes for styling the menu logo
 @mixin menu-logo {
-  #logo {
+  .amc-logo {
     @include menu-logo-block;
     @include menu-logo-styles;
   }
