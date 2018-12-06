@@ -5,9 +5,10 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint:sass",
+    "test": "npm run lint:sass && npm run lint:js",
+    "lint:js": "standard",
     "lint:sass": "sass-lint -v -q",
-    "build": "gulp sass"
+    "build": "gulp sass js php images"
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,10 @@
     "foundation-sites": "^6.5.1",
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.2",
+    "main.css": "^1.0.0",
     "node-sass": "^4.10.0",
     "normalize.css": "^8.0.1",
-    "sass-lint": "^1.12.1"
+    "sass-lint": "^1.12.1",
+    "standard": "^12.0.1"
   }
 }
