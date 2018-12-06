@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/amclin/amc-drupal-theme.svg?branch=master)](https://travis-ci.org/amclin/amc-drupal-theme)
+[![dependencies Status](https://david-dm.org/amclin/amc-drupal-theme/status.svg)](https://david-dm.org/amclin/amc-drupal-theme)
+[![devDependencies Status](https://david-dm.org/amclin/amc-drupal-theme/dev-status.svg)](https://david-dm.org/amclin/amc-drupal-theme?type=dev)
 # amc-drupal-theme
 Drupal theme used for [AnthonyMcLin.com](https://anthonymclin.com)
 
