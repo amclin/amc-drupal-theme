@@ -8,9 +8,9 @@ jQuery(document).ready(function ($) {
   /**
      * Gets the API from where it's defined in the page source
      */
-  var getAPI = function () {
-    var api
-    var block = $('#block-views-random-photo-block')
+  const getAPI = function () {
+    let api
+    let block = $('#block-views-random-photo-block')
     if (block.length === 1) {
       api = block.data().api
     }
@@ -21,7 +21,7 @@ jQuery(document).ready(function ($) {
      * Sets the background image of the page
      * @param {Url} url to the image
      */
-  var setBackground = function (url) {
+  const setBackground = function (url) {
     $('.region-background').css({
       'background-image': `url(${url})`
     })
@@ -32,7 +32,7 @@ jQuery(document).ready(function ($) {
      * @param {list} images Array of photo objects
      * @returns {string} URL of image
      */
-  var getRandomImage = function (images) {
+  const getRandomImage = function (images) {
     var url
     if (images.length > 0) {
       url = images[Math.floor(Math.random() * images.length)].photo.field_photo.src
@@ -40,7 +40,7 @@ jQuery(document).ready(function ($) {
     return url
   }
 
-  var api = getAPI()
+  const api = getAPI()
 
   if (typeof api === 'string') {
     var imageList = $.get({ url: api })

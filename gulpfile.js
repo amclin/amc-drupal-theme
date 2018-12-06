@@ -1,7 +1,10 @@
 'use strict'
 
 const gulp = require('gulp')
-var sass = require('gulp-sass')
+const sourcemaps = require('gulp-sourcemaps')
+const babel = require('gulp-babel')
+let sass = require('gulp-sass')
+
 const destination = './dist/amc'
 const sassPaths = [
   'node_modules/main.css/dist',
@@ -26,6 +29,9 @@ gulp.task('sass:watch', () => {
 // Copies theme .js files to distribution
 gulp.task('js', () => {
   return gulp.src('./src/**/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(babel())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(destination))
 })
 
