@@ -25,10 +25,10 @@ jQuery(document).ready(function($) {
                 </li>
             `);
         });
-        $('#filler').after($('<div id="slide_buttons">').append($button_list));
+        $('#filler').after($('<div class="slide-buttons">').append($button_list));
 
     	//Handle image swap on click
-        var slideCounters = $('#slide_buttons li');
+        var slideCounters = $('.slide-buttons li');
         slideCounters.on('click', 'a', (ev) => {
             ev.preventDefault(); // Block clicking on anchors
             var $a = $(ev.target);

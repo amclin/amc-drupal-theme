@@ -5,7 +5,7 @@
 //
 // Portfolio display for anthonymclin.com
 //
-#slide_buttons {
+.slide-buttons {
   bottom: 25px;
   left: 437px;
   position: fixed;
@@ -35,7 +35,7 @@
     color: $white;
     display: inline-block;
     height: 100%;
-    padding: 3px 0 0 0;
+    padding: 3px;
     text-decoration: none;
     width: 100%;
   }
