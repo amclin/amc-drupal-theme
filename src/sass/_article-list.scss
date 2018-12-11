@@ -9,19 +9,11 @@
   $min: .25,  // Minimum opacity
   $steps: 5   // Total number of steps to reach max
 ) {
-  opacity: $min;
-  transition-duration: .25s;
+  opacity: $max; // Fallback until JS is running
+  transition-duration: .5s;
 
-  // Iterate through the subsequent items
-  @for $i from 2 to ($steps + 1) {
-    &:nth-of-type(#{$i}) {
-      opacity: $max - ($i * ($min/$steps));
-    }
-  }
-
-  &:nth-of-type(1), // First item is maximum opacity
-  &:hover {         // Hovering an element makes it visible
-    opacity: $max;
+  .js & {
+    opacity: $min;
   }
 }
 
