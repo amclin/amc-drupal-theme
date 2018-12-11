@@ -1,0 +1,28 @@
+//
+// List of articles
+//
+
+// Graduated transparency
+// First is fully opaque, last is mostly transparent
+@mixin graduated-transparency-blocks (
+  $max: 1,    // Maximum opacity
+  $min: .25,  // Minimum opacity
+  $steps: 5   // Total number of steps to reach max
+) {
+  opacity: $max; // Fallback until JS is running
+  transition-duration: .5s;
+
+  .js & {
+    opacity: $min;
+  }
+}
+
+@mixin article-list {
+  .region-content {
+    .view-content {
+      .views-row {
+        @include graduated-transparency-blocks;
+      }
+    }
+  }
+}

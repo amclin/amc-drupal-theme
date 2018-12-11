@@ -74,17 +74,22 @@
 ?>
 
 <?php if (isset($page['menu_strip'])): ?>
-	<nav id="strip" role="navigation">
-		<div id="logo"><a href="https://anthonymclin.com">anthonymclin.com</a></div>
-		<div id="menu">
+	<nav class="amc-strip">
+		<div class="amc-logo"><a href="https://anthonymclin.com">anthonymclin.com</a></div>
+		<div class="amc-menu">
 			<?php print render($page['menu_strip']); ?>
 		</div>
-		<div id="filler">&nbsp;</div>
+		<div class="amc-filler">&nbsp;</div>
 	</nav>
 <?php endif; ?>
 
-<div class="container">
-	<div class="nine columns offset-by-seven page-contents">
+<div class="amc-container">
+	<?php if($messages) { ?>
+		<header class="amc-messages">
+			<?php print $messages; ?>
+		</header>
+	<?php } ?>
+	<header class="amc-title">
 		<?php
 			//List views without titles (like homepage)
 			if(empty($title)) {
@@ -105,9 +110,10 @@
 			$titletag = "<$titletag class='pagetitle'>%s</$titletag>";
 		?>
 		<?php print sprintf($titletag,$title); ?>
-		<?php print $messages; ?>
+	</header>
+	<main class="amc-content">
 		<?php print render($page['content']); ?>
-	</div>
+	</main>
 </div>
 
 <?php if (isset($page['background']) && !empty($page['background'])) { ?>

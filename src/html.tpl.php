@@ -45,19 +45,16 @@
 
 $htmlattributes = "lang=\"{$language->language}\" dir=\"{$language->dir}\" $rdf_namespaces";
 
-?><!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php print $htmlattributes ?>> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" <?php print $htmlattributes ?>> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" <?php print $htmlattributes ?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" <?php print $htmlattributes ?>> <!--<![endif]-->
+?><!doctype html>
+<html class="no-js" <?php print $htmlattributes ?>>
 	<head>
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<link rel="dns-prefetch" href="https://www.google-analytics.com" />
 		<link rel="dns-prefetch" href="https://s7.addthis.com" />
 		<link rel="dns-prefetch" href="https://m.addthisedge.com" />
 		<?php print $head; ?>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><?php print $head_title; ?></title>
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<?php
 		  $amc_author = theme_get_setting('amc_author');
 		  if($amc_author) {
@@ -68,8 +65,8 @@ $htmlattributes = "lang=\"{$language->language}\" dir=\"{$language->dir}\" $rdf_
 		<?php print $head_scripts; //Most scripts moved to bottom of page ?>
 	</head>
 	<body class="<?php print $classes; ?>" <?php print $attributes;?>>
-		<!--[if lt IE 7]>
-			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<!--[if lte IE 11]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 		<![endif]-->
 		<div id="skip-link">
 			<a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
@@ -82,14 +79,14 @@ $htmlattributes = "lang=\"{$language->language}\" dir=\"{$language->dir}\" $rdf_
 		<?php print $scripts; ?>
 
 		<?php print $page_bottom; ?>
+
+		<script>
+			window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+			ga('create', 'UA-1527676-1', 'auto'); ga('send', 'pageview')
+		</script>
+  		<script src="https://www.google-analytics.com/analytics.js" async defer></script>
 		
-        <script>
-            var _gaq=[['_setAccount','UA-1527676-1'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-        
+
         <!-- AddThis Button BEGIN -->
 		<div class="addthis_toolbox addthis_floating_style addthis_16x16_style">
 			<a class="addthis_button_preferred_1"></a>

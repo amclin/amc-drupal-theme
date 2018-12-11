@@ -1,0 +1,36 @@
+
+// Positions and sizes the logo in the main menu
+@mixin menu-logo-block {
+  display: block;
+  float: left;
+  height:	19px;
+  margin:	0 3px 0 0;
+  padding: 46px 10px 0 0;
+  text-align: right;
+  width: 105px;
+}
+
+// Controls the logo appearance
+@mixin menu-logo-styles {
+  background: $dark-gray;
+  color: $white;
+  font-size: 83.3%;
+  text-transform:	lowercase;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .amc-strip:hover & { // sass-lint:disable-line force-pseudo-nesting // Needed to support trailing &
+    color: $medium-gray;
+  }
+}
+
+// Outputs the classes for styling the menu logo
+@mixin menu-logo {
+  .amc-logo {
+    @include menu-logo-block;
+    @include menu-logo-styles;
+  }
+}
