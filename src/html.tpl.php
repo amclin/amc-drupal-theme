@@ -44,17 +44,22 @@
  */
 
 $htmlattributes = "lang=\"{$language->language}\" dir=\"{$language->dir}\" $rdf_namespaces";
+$amc_author = theme_get_setting('amc_author');
+$ga_id = theme_get_setting('amc_ga_id');
 
 ?><!doctype html>
 <html class="no-js" <?php print $htmlattributes ?>>
 	<head>
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<link rel="dns-prefetch" href="https://www.google-analytics.com" />
+		<?php
+		  if($amc_ga_id) {
+		    print "<link rel=\"dns-prefetch\" href=\"https://www.google-analytics.com\" />\n\r";
+		  }
+		?>
 		<?php print $head; ?>
 		<title><?php print $head_title; ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<?php
-		  $amc_author = theme_get_setting('amc_author');
 		  if($amc_author) {
 			print "<link rel=\"author\" href=\"$amc_author\"/>\n\r";
 		  }
@@ -78,10 +83,15 @@ $htmlattributes = "lang=\"{$language->language}\" dir=\"{$language->dir}\" $rdf_
 
 		<?php print $page_bottom; ?>
 
-		<script>
-			window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-			ga('create', 'UA-1527676-1', 'auto'); ga('send', 'pageview')
-		</script>
-  		<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+		<?php
+		  if($amc_ga_id) { ?>
+		    <script>
+			  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+			  ga('create', '<?php print $amc_ga_id; ?>', 'auto'); ga('send', 'pageview')
+			</script>
+			<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+		<?php
+		  }
+		?>
 	</body>
 </html>
