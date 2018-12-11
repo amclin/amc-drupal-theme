@@ -14,6 +14,7 @@ stylesheets[print][] = css/print.css
 
 scripts[] = js/plugins.js
 scripts[] = js/main.js
+scripts[] = js/list-transparency.js
 scripts[] = js/random-background.js
 scripts[] = js/portfolio.js
 
