@@ -2,7 +2,6 @@
 @import 'typography';
 @import 'article-date';
 @import 'article-list';
-@import 'addthis';
 @import 'background';
 
 @import 'normalize';
@@ -69,7 +68,6 @@ h2 {
 
 @include background;
 @include article-date;
-@include addthis;
 
 .comment {
   .author {
