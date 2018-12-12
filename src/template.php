@@ -78,4 +78,14 @@ function amc_preprocess_comment(&$vars) {
 // 	$variables['links'] = theme('links', $links);
 }
 
+/**
+ * Hook for processing before rendering views
+ */
+function amc_preprocess_views_view(&$vars) {
+  if($vars['name'] == 'frontpage') {
+    $themepath = drupal_get_path('theme', 'amc');
+    drupal_add_js($themepath . '/js/list-transparency.js');
+    drupal_add_css($themepath . '/css/frontpage.css');
+  }
+}
 ?>
