@@ -23,6 +23,14 @@ function amc_form_system_theme_settings_alter(&$form, $form_state) {
 	  '#description'   => t("URL to use for the &lt;link rel=\"author\" &gt; tag. Provides SEO value by linking to an author's website or profile. Should be a fully-qualified URL with the http/https prefix."),
 	);
 
+	// Sets the Google Analytics ID
+	$form['amc_ga_id'] = array(
+		'#type'          => 'textfield',
+		'#title'         => t('Google Analytics ID'),
+		'#default_value' => theme_get_setting('amc_ga_id'),
+		'#description'   => t("ID for Google Analytics tracking. <em>UA-XXXXXXXX</em>"),
+	  );
+
 	// Sets an API path for loading random images from the portfolio
 	$form['amc_api_random_photo'] = array(
 		'#type'          => 'textfield',

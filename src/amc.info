@@ -22,4 +22,5 @@ regions[menu_strip] = Menu Strip
 regions[background] = Background
 
 settings[amc_author] =
+settings[amc_ga_id] =
 settings[amc_random_background_api] =
