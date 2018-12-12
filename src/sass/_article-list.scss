@@ -19,8 +19,16 @@
 
 @mixin article-list {
   .region-content {
+    // Frontpage use
     .view-content {
       .views-row {
+        @include graduated-transparency-blocks;
+      }
+    }
+
+    // Taxonomy term list pages
+    .content {
+      .node-teaser {
         @include graduated-transparency-blocks;
       }
     }

@@ -1,7 +1,7 @@
 const maxOpacity = 1 // Fully highlighted elements
 const minOpacity = 0.5 // Defocused elements
 const screenMargin = 0.25 // Top and bottom threshold to trigger transition
-const sections = document.querySelectorAll('.region-content .view-content .views-row')
+const sections = document.querySelectorAll('.region-content .view-content .views-row, .region-content .content .node-teaser')
 
 /**
  * Identifies if the element is within the defined display area
