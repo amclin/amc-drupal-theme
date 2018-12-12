@@ -50,8 +50,6 @@ $htmlattributes = "lang=\"{$language->language}\" dir=\"{$language->dir}\" $rdf_
 	<head>
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<link rel="dns-prefetch" href="https://www.google-analytics.com" />
-		<link rel="dns-prefetch" href="https://s7.addthis.com" />
-		<link rel="dns-prefetch" href="https://m.addthisedge.com" />
 		<?php print $head; ?>
 		<title><?php print $head_title; ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -85,18 +83,5 @@ $htmlattributes = "lang=\"{$language->language}\" dir=\"{$language->dir}\" $rdf_
 			ga('create', 'UA-1527676-1', 'auto'); ga('send', 'pageview')
 		</script>
   		<script src="https://www.google-analytics.com/analytics.js" async defer></script>
-		
-
-        <!-- AddThis Button BEGIN -->
-		<div class="addthis_toolbox addthis_floating_style addthis_16x16_style">
-			<a class="addthis_button_preferred_1"></a>
-			<a class="addthis_button_preferred_2"></a>
-			<a class="addthis_button_preferred_3"></a>
-			<a class="addthis_button_preferred_4"></a>
-			<a class="addthis_button_compact"></a>
-		</div>
-		<script type="text/javascript">var addthis_config = {"data_track_addressbar":true,data_ga_property: 'UA-1527676-1',data_ga_social : true};</script>
-		<script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e1bd9e270c39903"></script>
-		<!-- AddThis Button END -->
 	</body>
 </html>
