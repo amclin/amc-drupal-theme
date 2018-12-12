@@ -8,7 +8,9 @@
     "test": "npm run lint:sass && npm run lint:js",
     "lint:js": "standard",
     "lint:sass": "sass-lint -v -q",
-    "build": "gulp sass js php images"
+    "build": "gulp sass js php images",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
