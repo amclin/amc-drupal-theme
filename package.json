@@ -8,8 +8,9 @@
     "test": "npm run lint:sass && npm run lint:js",
     "lint:js": "standard",
     "lint:sass": "sass-lint -v -q",
-    "build": "gulp sass js php images",
+    "build": "gulp sass js php images info",
     "preversion": "npm test",
+    "version": "npm run build && git add -A dist",
     "postversion": "git push && git push --tags"
   },
   "repository": {
@@ -28,6 +29,7 @@
     "foundation-sites": "^6.5.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^8.0.0-beta.2",
+    "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
     "main.css": "^1.0.0",
