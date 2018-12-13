@@ -37,5 +37,10 @@
     "normalize.css": "^8.0.1",
     "sass-lint": "^1.12.1",
     "standard": "^12.0.1"
+  },
+  "standard": {
+    "ignore": [
+      "dist/**/*.js"
+    ]
   }
 }
