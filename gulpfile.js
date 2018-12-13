@@ -45,7 +45,7 @@ gulp.task('php', () => {
 // Copies and populates the theme .info file
 gulp.task('info', () => {
   const version = process.env.npm_package_version
-  const description = process.env.npm_package_amc_drupal_theme_config_description
+  const description = process.env.npm_package_description
   console.log(`Creating theme info file for v${version}`)
   return gulp.src('./src/**/*.info')
     .pipe(replace('{VERSION}', version))
