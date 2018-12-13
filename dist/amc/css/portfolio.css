@@ -1,0 +1,35 @@
+.view-id-photo_gallery {
+  display: none; }
+
+.slide-buttons {
+  bottom: 25px;
+  left: 437px;
+  position: fixed;
+  z-index: 200; }
+  .slide-buttons ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  .slide-buttons li {
+    background: #000;
+    color: #fff;
+    float: left;
+    font-family: Monaco, Lucida Console, Courier, mono;
+    font-size: 9px;
+    height: 15px;
+    line-height: 9px;
+    margin: 0 3px 0 0;
+    overflow: hidden;
+    text-align: center;
+    width: 15px; }
+    .slide-buttons li:hover, .slide-buttons li.active {
+      background: #fff;
+      color: #000;
+      cursor: pointer; }
+    .slide-buttons li a {
+      color: inherit;
+      display: inline-block;
+      height: 100%;
+      padding: 3px 0 0;
+      text-decoration: none;
+      width: 100%; }

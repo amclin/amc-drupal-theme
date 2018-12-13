@@ -1,0 +1,28 @@
+.amc-content, .amc-title, .amc-messages {
+  width: 100%; }
+
+.amc-container {
+  margin: 0 auto;
+  min-width: 300px;
+  position: relative;
+  width: calc(100vw - 40px); }
+  @media print, screen and (min-width: 64em) {
+    .amc-container {
+      width: 960px; } }
+
+@supports (display: grid) {
+  @media print, screen and (min-width: 40em) {
+    .amc-container {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas: 'messages messages' '....... title' '....... content';
+      grid-template-columns: auto 412px; } }
+  @media print, screen and (min-width: 64em) {
+    .amc-container {
+      grid-template-columns: auto 520px; } }
+  .amc-content {
+    grid-area: content; }
+  .amc-title {
+    grid-area: title; }
+  .amc-messages {
+    grid-area: messages; } }
