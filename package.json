@@ -1,6 +1,6 @@
 {
   "name": "amc-drupal-theme",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Drupal theme for AnthonyMcLin.com",
   "private": true,
   "main": "index.js",
