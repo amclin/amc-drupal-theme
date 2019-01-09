@@ -11,7 +11,6 @@
     "build": "gulp sass js php images info",
     "preversion": "npm test",
     "version": "npm run build && git add -A dist",
-    "postversion": "git push && git push --tags",
     "semantic-release": "semantic-release"
   },
   "repository": {
