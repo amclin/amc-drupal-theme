@@ -9,7 +9,6 @@
     "lint:js": "standard",
     "lint:sass": "sass-lint -v -q",
     "build": "gulp sass js php images info",
-    "preversion": "npm run build",
     "semantic-release": "semantic-release"
   },
   "repository": {
