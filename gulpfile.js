@@ -3,6 +3,7 @@
 const gulp = require('gulp')
 const sourcemaps = require('gulp-sourcemaps')
 const babel = require('gulp-babel')
+var replace = require('gulp-replace')
 let sass = require('gulp-sass')
 
 const destination = './dist/amc'
@@ -35,9 +36,20 @@ gulp.task('js', () => {
     .pipe(gulp.dest(destination))
 })
 
-// Copies theme .info and .php files to distribution
+// Copies theme .php files to distribution
 gulp.task('php', () => {
-  return gulp.src('./src/**/*.{php,info}')
+  return gulp.src('./src/**/*.php')
+    .pipe(gulp.dest(destination))
+})
+
+// Copies and populates the theme .info file
+gulp.task('info', () => {
+  const version = process.env.npm_package_version
+  const description = process.env.npm_package_description
+  console.log(`Creating theme info file for v${version}`)
+  return gulp.src('./src/**/*.info')
+    .pipe(replace('{VERSION}', version))
+    .pipe(replace('{DESCRIPTION}', description))
     .pipe(gulp.dest(destination))
 })
 

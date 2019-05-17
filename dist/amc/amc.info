@@ -1,7 +1,7 @@
 name = AMC
-description = {DESCRIPTION}
+description = Drupal theme for AnthonyMcLin.com
 package = AMC
-version = {VERSION}
+version = 1.4.6
 core = 7.x
 
 stylesheets[screen or print][] = css/fonts.css
@@ -22,5 +22,4 @@ regions[menu_strip] = Menu Strip
 regions[background] = Background
 
 settings[amc_author] =
-settings[amc_ga_id] =
 settings[amc_random_background_api] =
