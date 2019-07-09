@@ -34,7 +34,7 @@
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
-    "main.css": "^1.0.0",
+    "main.css": "^2.0.0",
     "node-sass": "^4.4.2",
     "normalize.css": "^8.0.1",
     "sass-lint": "^1.13.1",
