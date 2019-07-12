@@ -39,7 +39,7 @@
     "normalize.css": "^8.0.1",
     "sass-lint": "^1.13.1",
     "semantic-release": "^15.13.12",
-    "standard": "^12.0.1"
+    "standard": "^13.0.2"
   },
   "standard": {
     "ignore": [
