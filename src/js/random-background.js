@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
      */
   const getAPI = function () {
     let api
-    let block = $('#block-views-random-photo-block')
+    const block = $('#block-views-random-photo-block')
     if (block.length === 1) {
       api = block.data().api
     }
