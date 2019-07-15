@@ -4,7 +4,7 @@ const gulp = require('gulp')
 const sourcemaps = require('gulp-sourcemaps')
 const babel = require('gulp-babel')
 var replace = require('gulp-replace')
-let sass = require('gulp-sass')
+const sass = require('gulp-sass')
 
 const destination = './dist/amc'
 const sassPaths = [
