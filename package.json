@@ -33,7 +33,7 @@
     "gulp-babel": "^8.0.0-beta.2",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.4",
+    "gulp-sourcemaps": "^2.6.5",
     "main.css": "^2.0.0",
     "node-sass": "^4.4.2",
     "normalize.css": "^8.0.1",
