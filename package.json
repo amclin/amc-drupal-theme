@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/amclin/amc-drupal-theme#readme",
   "devDependencies": {
-    "@babel/core": "^7.7.4",
+    "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.5",
     "@semantic-release/exec": "^3.3.8",
     "@semantic-release/git": "^7.0.18",
