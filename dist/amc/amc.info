@@ -1,7 +1,7 @@
 name = AMC
 description = Drupal theme for AnthonyMcLin.com
 package = AMC
-version = 1.4.7
+version = 1.4.8
 core = 7.x
 
 stylesheets[screen or print][] = css/fonts.css
