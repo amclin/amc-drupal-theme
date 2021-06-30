@@ -4,7 +4,6 @@ package = AMC
 version = {VERSION}
 core = 7.x
 
-stylesheets[screen or print][] = css/fonts.css
 stylesheets[screen][] = css/main.css
 stylesheets[screen][] = css/base.css
 stylesheets[screen][] = css/layout.css

@@ -3,9 +3,9 @@
 ================================================== */
 .button,
 button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+input[type=submit],
+input[type=reset],
+input[type=button] {
   background: #eee;
   /* Old browsers */
   background: #eee -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
@@ -36,13 +36,14 @@ input[type="button"] {
   margin-bottom: 20px;
   line-height: normal;
   padding: 8px 10px;
-  font-family: HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif; }
+  font-family: HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
 
 .button:hover,
 button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover {
+input[type=submit]:hover,
+input[type=reset]:hover,
+input[type=button]:hover {
   color: #222;
   background: #ddd;
   /* Old browsers */
@@ -60,13 +61,14 @@ input[type="button"]:hover {
   /* W3C */
   border: 1px solid #888;
   border-top: 1px solid #aaa;
-  border-left: 1px solid #aaa; }
+  border-left: 1px solid #aaa;
+}
 
 .button:active,
 button:active,
-input[type="submit"]:active,
-input[type="reset"]:active,
-input[type="button"]:active {
+input[type=submit]:active,
+input[type=reset]:active,
+input[type=button]:active {
   border: 1px solid #666;
   background: #ccc;
   /* Old browsers */
@@ -81,25 +83,29 @@ input[type="button"]:active {
   background: #ccc -ms-linear-gradient(top, rgba(255, 255, 255, 0.35) 0%, rgba(10, 10, 10, 0.4) 100%);
   /* IE10+ */
   background: #ccc linear-gradient(top, rgba(255, 255, 255, 0.35) 0%, rgba(10, 10, 10, 0.4) 100%);
-  /* W3C */ }
+  /* W3C */
+}
 
 .button.full-width,
 button.full-width,
-input[type="submit"].full-width,
-input[type="reset"].full-width,
-input[type="button"].full-width {
+input[type=submit].full-width,
+input[type=reset].full-width,
+input[type=button].full-width {
   width: 100%;
   padding-left: 0 !important;
   padding-right: 0 !important;
-  text-align: center; }
+  text-align: center;
+}
 
 /* Fix for odd Mozilla border & padding issues */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 .field-name-body img,
 .field-name-field-header-image img {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+}

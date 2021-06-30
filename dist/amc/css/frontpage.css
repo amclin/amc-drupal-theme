@@ -1,11 +1,14 @@
 .region-content .view-content .views-row {
   opacity: 1;
-  transition-duration: .5s; }
-  .js .region-content .view-content .views-row {
-    opacity: 0.25; }
-
+  transition-duration: 0.5s;
+}
+.js .region-content .view-content .views-row {
+  opacity: 0.25;
+}
 .region-content .content .node-teaser {
   opacity: 1;
-  transition-duration: .5s; }
-  .js .region-content .content .node-teaser {
-    opacity: 0.25; }
+  transition-duration: 0.5s;
+}
+.js .region-content .content .node-teaser {
+  opacity: 0.25;
+}
