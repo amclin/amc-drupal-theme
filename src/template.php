@@ -4,13 +4,13 @@
  */
 function amc_preprocess_html(&$vars) {
   //Add external CSS filesfonts from Google CDN
-	//drupal_add_css(
-	//	'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic|Open+Sans:300',
-	//	array(
-	//		'type' => 'external',
-	//		'media' => 'screen or print'
-	//	)
-	//);
+	drupal_add_css(
+		'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic|Open+Sans:300&display=swap',
+		array(
+			'type' => 'external',
+			'media' => 'screen or print'
+		)
+	);
   // Move JS files "$scripts" to page bottom for perfs/logic.
   // Add JS files that *needs* to be loaded in the head in a new "$head_scripts" scope.
   // For instance the Modernizr lib.
