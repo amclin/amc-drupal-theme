@@ -6,10 +6,6 @@ updates:
     interval: daily
     time: "13:00"
   open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: gulp-replace
-    versions:
-    - 1.1.1
   commit-message:
     prefix: fix
     prefix-development: refactor
