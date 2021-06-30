@@ -1,5 +1,5 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![Build Status](https://travis-ci.org/amclin/amc-drupal-theme.svg?branch=master)](https://travis-ci.org/amclin/amc-drupal-theme)
+[![Build Status](https://github.com/amclin/amc-drupal-theme/actions/workflows/release.yml/badge.svg)](https://github.com/amclin/amc-drupal-theme/actions/workflows/release.yml)
 [![dependencies Status](https://david-dm.org/amclin/amc-drupal-theme/status.svg)](https://david-dm.org/amclin/amc-drupal-theme)
 [![devDependencies Status](https://david-dm.org/amclin/amc-drupal-theme/dev-status.svg)](https://david-dm.org/amclin/amc-drupal-theme?type=dev) [![Dependabot Status](https://badgen.net/dependabot/amclin/amc-drupal-theme/?icon=dependabot)](https://dependabot.com)
 # amc-drupal-theme
