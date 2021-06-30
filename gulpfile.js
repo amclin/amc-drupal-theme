@@ -4,7 +4,7 @@ const gulp = require('gulp')
 const sourcemaps = require('gulp-sourcemaps')
 const babel = require('gulp-babel')
 var replace = require('gulp-replace')
-const sass = require('gulp-sass')
+const sass = require('gulp-sass')(require('sass'))
 
 const destination = './dist/amc'
 const sassPaths = [
@@ -12,8 +12,6 @@ const sassPaths = [
   'node_modules/normalize.css',
   'node_modules/foundation-sites/scss'
 ]
-
-sass.compiler = require('node-sass')
 
 gulp.task('sass', () => {
   return gulp.src('./src/sass/**/*.scss')
