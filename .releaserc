@@ -6,7 +6,6 @@
       "npmPublish": false
     }],
     ["@semantic-release/exec", {
-      "prepare": "npm run build"
       "prepareCmd": "npm run build"
     }],
     ["@semantic-release/git", {
