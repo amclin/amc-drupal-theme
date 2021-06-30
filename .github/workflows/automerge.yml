@@ -1,23 +1,21 @@
 name: Automerge
 
-Automerge:
-  needs: [Run Tests]
-  runs-on: ubuntu-latest
-  if: |
-    github.actor == 'dependabot[bot]' &&
-    github.event_name == 'pull_request'
-  if: |
-    startsWith(github.event.pull_request.title, 'refactor(deps-dev):') ||
-    startsWith(github.event.pull_request.title, 'fix(deps):')
-  steps:
-    - name: '@dependabot merge'
-      uses: actions/github-script@v2
-      with:
-        github-token: ${{secrets.GH_PAT}}
-        script: |
-          await github.issues.createComment({
-            owner: context.payload.repository.owner.login,
-            repo: context.payload.repository.name,
-            issue_number: context.payload.pull_request.number,
-            body: '@dependabot merge'
-          })
+on:
+  check_suite:
+    types:
+      - completed
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    if: |
+      github.actor == 'dependabot[bot]' &&
+      github.event_name == 'pull_request'
+    if: |
+      startsWith(github.event.pull_request.title, 'refactor(deps-dev):') ||
+      startsWith(github.event.pull_request.title, 'fix(deps):')
+    steps:
+      - name: Merge me!
+        uses: ridedott/merge-me-action@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
