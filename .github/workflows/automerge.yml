@@ -1,9 +1,12 @@
 name: Automerge
 
 on:
-  check_suite:
+  workflow_run:
     types:
       - completed
+    workflows:
+      # List all required workflow names here.
+      - Run Tests
 
 jobs:
   automerge:
@@ -11,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
+        if: ${{ github.event.workflow_run.conclusion == 'success' }}
         name: Merge Dependabot Pull Request
         uses: ridedott/merge-me-action@v2
         with:
