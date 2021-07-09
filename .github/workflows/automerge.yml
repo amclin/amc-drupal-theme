@@ -6,12 +6,12 @@ on:
       - completed
 
 jobs:
-  automerge:  #automerge pull requests from dependabot
+  automerge:
+    name: automerge
     runs-on: ubuntu-latest
-    # if: |
-    #   github.event.check_suite.conclusion == 'success'
     steps:
-      - name: Merge Dependabot Pull Request
+      -
+        name: Merge Dependabot Pull Request
         uses: ridedott/merge-me-action@v2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
