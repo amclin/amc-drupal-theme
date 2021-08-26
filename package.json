@@ -37,7 +37,7 @@
     "normalize.css": "^8.0.1",
     "sass": "^1.38.1",
     "sass-lint": "^1.13.1",
-    "semantic-release": "^17.4.6",
+    "semantic-release": "^17.4.7",
     "standard": "^16.0.3"
   },
   "standard": {
