@@ -38,7 +38,7 @@
     "sass": "^1.42.1",
     "sass-lint": "^1.13.1",
     "semantic-release": "^18.0.0",
-    "standard": "^16.0.3"
+    "standard": "^16.0.4"
   },
   "standard": {
     "ignore": [
