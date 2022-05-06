@@ -1,4 +1,4 @@
-/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -45,14 +45,6 @@ a[href^="javascript:"]::after {
 blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
-  }
-
-  /*
-   * Printing Tables:
-   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
-  thead {
-    display: table-header-group;
   }
 
   tr,
