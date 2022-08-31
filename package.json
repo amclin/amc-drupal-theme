@@ -35,7 +35,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "main.css": "^3.0.0",
     "normalize.css": "^8.0.1",
-    "sass": "^1.54.6",
+    "sass": "^1.54.7",
     "sass-lint": "^1.13.1",
     "semantic-release": "^19.0.5",
     "standard": "^17.0.0"
