@@ -9,10 +9,10 @@ jQuery(document).ready(function ($) {
     var position = $(this).parent().position();
     $(this).css('top', 4 - position.top);
   });
+
   /**
      * Trigger an initial resize
      */
-
   $(window).resize();
 });
 //# sourceMappingURL=main.js.map

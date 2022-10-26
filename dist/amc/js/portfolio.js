@@ -11,32 +11,38 @@ jQuery(document).ready(function ($) {
      * Sets the background image of the page
      * @param {Url} url to the image
      */
-    var setBackground = function setBackground(url) {
+    var setBackground = function (url) {
       $('.region-background').css({
-        'background-image': "url(".concat(url, ")")
+        'background-image': `url(${url})`
       });
-    }; // Setup buttons
+    };
 
-
+    // Setup buttons
     var $photos = $('.view-id-photo_gallery img');
     var $buttonList = $('<ul>');
     $photos.each(function (idx, el) {
-      var $el = $(el);
-      $buttonList.append("\n        <li>\n          <a href=\"".concat($el.attr('src'), "\"\n            title=\"").concat($el.attr('alt'), "\">").concat(idx + 1, "</a>\n        </li>\n      "));
+      const $el = $(el);
+      $buttonList.append(`
+        <li>
+          <a href="${$el.attr('src')}"
+            title="${$el.attr('alt')}">${idx + 1}</a>
+        </li>
+      `);
     });
-    $('#filler').after($('<div class="slide-buttons">').append($buttonList)); // Handle image swap on click
+    $('#filler').after($('<div class="slide-buttons">').append($buttonList));
 
+    // Handle image swap on click
     var slideCounters = $('.slide-buttons li');
-    slideCounters.on('click', 'a', function (ev) {
+    slideCounters.on('click', 'a', ev => {
       ev.preventDefault(); // Block clicking on anchors
-
-      var $a = $(ev.target);
+      const $a = $(ev.target);
       var $li = $a.parent();
       slideCounters.removeClass('active');
       $li.addClass('active');
       setBackground($a.attr('href'));
-    }); // Trigger first slide
+    });
 
+    // Trigger first slide
     $('a', slideCounters[0]).click();
   }
 });
